@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    gemcutter (0.7.1)
     git (1.2.5)
     jeweler (1.8.4)
       bundler (~> 1.0)
@@ -22,5 +23,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  gemcutter
   jeweler
   simplecov
