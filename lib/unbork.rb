@@ -20,7 +20,13 @@ module Unbork
     end
 
     def unbork text
-      text.gsub(swedish_letters, swedish)
+      if RUBY_VERSION > "1.9"
+        text.gsub(swedish_letters, swedish)
+      else
+        text.gsub(swedish_letters) do |match|
+          swedish[match]
+        end
+      end
     end
   end
 end
